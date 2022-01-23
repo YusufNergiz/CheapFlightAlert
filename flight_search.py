@@ -1,12 +1,7 @@
-import os
-
 import requests
 from flight_data import FlightData
-from dotenv import load_dotenv
-load_dotenv()
-FLIGHT_SEARCH_API = os.getenv("FLIGHT_SEARCH_API")
+FLIGHT_SEARCH_API = "yLyVv9M6e-7EkLGdfpw56LUfzRwTyzMN"
 TEQUILA_ENDPOINT = "https://tequila-api.kiwi.com"
-
 
 class FlightSearch:
 
