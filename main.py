@@ -1,10 +1,14 @@
+import os
+
 from data_manager import DataManager
 from pprint import pprint
 from datetime import datetime, timedelta
 from flight_search import FlightSearch
+from dotenv import load_dotenv
+load_dotenv()
 
-TWILIO_ACC_SID = "AC4998de1745722ffbed33028f9cae7aa7"
-TWILIO_AUTH_TOKEN = "846f6810b44bfbb3dbeaee3f9626c127"
+TWILIO_ACC_SID = os.getenv("TWILIO_ACC_SID")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
 
 data_manager = DataManager()
 sheet_data = data_manager.get_destination_data()
